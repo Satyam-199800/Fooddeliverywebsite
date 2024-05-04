@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../Food Delivery App/Food images/delivery-guy.png';
+import logo from './Food images/delivery-guy.png';
 import { NavLink } from 'react-router-dom';
 
 const Home = () => {

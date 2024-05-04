@@ -1,7 +1,7 @@
 import React from "react";
 import "./footer.css";
 import {ListGroup} from 'reactstrap';
-import logo from '../Food Delivery App/Food images/res-logo.png';
+import logo from "./Food images/res-logo.png";
 
 const Footer = () => {
   return (

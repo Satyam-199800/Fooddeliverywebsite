@@ -1,7 +1,7 @@
 
 import React from 'react';
 import{BrowserRouter, Routes, Route} from "react-router-dom";
-import LoginPage from '../Food Delivery App/LoginPage';
+import LoginPage from './LoginPage';
 import Home from './Home';
 import MenuPage from './MenuPage';
 import Header from './Header';
