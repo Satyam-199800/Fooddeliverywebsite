@@ -14,7 +14,7 @@ const [loading, setLoading] = useState(true);
 useEffect(() => {
   async function getDataFromBackend() {
      try{
-      const response = await axios.get('http://localhost:3001/api/product');
+      const response = await axios.get('https://fooddeliverywebsite-theta.vercel.app/api/product');
       console.log(response.data);
       setProduct(response.data);
       setFoodOnly(response.data.filter((item) => item.category === "food"));

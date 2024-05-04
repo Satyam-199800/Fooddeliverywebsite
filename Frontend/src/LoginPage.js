@@ -31,7 +31,7 @@ const LoginPage = () => {
   const signupUser = async (currentUser) => {
     try {
       const response = await axios.post(
-        'http://localhost:3001/api/signup',
+        'https://fooddeliverywebsite-theta.vercel.app/api/signup',
         currentUser
       );
       const { user, token } = response.data;
@@ -49,7 +49,7 @@ const LoginPage = () => {
   const loginUser = async (currentUser) => {
     try {
       const response = await axios.post(
-        'http://localhost:3001/api/login',
+        'https://fooddeliverywebsite-theta.vercel.app/api/login',
         currentUser
       );
       const { user, token } = response.data;
