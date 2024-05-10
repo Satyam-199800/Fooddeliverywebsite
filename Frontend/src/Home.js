@@ -1,8 +1,16 @@
 import React from 'react';
 import logo from './Food images/delivery-guy.png';
-import { NavLink } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
+  const navigate = useNavigate();
+  const user = localStorage.getItem("user");
+
+  const logoutUser = () => {
+    localStorage.removeItem("user");
+    location.reload();
+  };
+  
   return (
     <>
     <div>
@@ -17,10 +25,12 @@ const Home = () => {
       <h1 className="display-1 fw-bold lh-1 mb-3">Want to order online</h1>
      
       <div className="d-grid gap-2 d-md-flex justify-content-md-start">
-        <NavLink to={'login'}>
-        <button type="button" className="btn btn-primary btn-lg px-4 me-md-2">LogIn</button>
-        <button type="button" className="btn btn-outline-secondary btn-lg px-4">Signup</button>
-        </NavLink>
+        <button type="button" className="btn btn-primary btn-lg px-4 me-md-2"onClick={() => navigate(user ? "/Menu" : "/login")}>{user ? "Start Ordering" : "Login now"}</button>
+        {user && (
+            <button type="button" className="btn btn-primary btn-lg px-4 me-md-2" onClick={() => logoutUser()}>
+              {"Logout"}
+            </button>
+          )}
       </div>
     </div>
   </div>
