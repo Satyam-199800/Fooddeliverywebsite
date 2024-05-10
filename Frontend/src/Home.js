@@ -8,7 +8,7 @@ const Home = () => {
 
   const logoutUser = () => {
     localStorage.removeItem("user");
-    location.reload();
+    window.location.reload();
   };
   
   return (
